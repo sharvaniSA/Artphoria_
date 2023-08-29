@@ -1,0 +1,82 @@
+
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.img{
+   top: 10px;
+   left: 120px;
+   display: flex;
+   font-family:"Lucida Console", monospace;
+   font-size: 20px;
+   }
+
+
+<!--.artphoria{
+  top: 10px;
+  font-family:"Lucida Handwriting", cursive;
+  <!--left: 225px;--!>
+  font-family:"Lucida Handwriting", cursive;
+  }
+-->
+  
+.login-button {
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color:#fff ;
+    text-decoration: none;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+.signin-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    cursor:pointer;
+}
+.slideshow-container {
+    max-width: 60%;
+    position: relative;
+    margin: auto;
+    
+}
+
+.slide {
+    display:center;
+}
+
+.slide img {
+    width: 100%
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+}
+.k{
+   text-decoration:none;
+}
+.signin-button{
+cursor:pointer;
+}
