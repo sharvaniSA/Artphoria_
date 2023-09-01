@@ -1,0 +1,326 @@
+/* Basic Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color :#AA98A9;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#artwork-gallery {
+    flex: 2; /* Allocate 2/3rd of the screen for artwork display */
+    margin-right: 10px; /* Add some spacing between columns */
+}
+
+#right-column {
+    flex: 1; /* Adjust the width of the right column */
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; /* Add some spacing between columns */
+}
+
+#upload-section {
+    /* Styles for the Upload Your Artwork section */
+    margin-bottom: 20px; /* Add spacing between sections */
+}
+
+#leaderboard {
+    /* Styles for the Leaderboard section */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: lilac; /* Use your desired lilac color */
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+/* Add a border to the .artwork-card class */
+.artwork-card {
+    background-color: #D8BFD8;
+    border: 1px solid #ccc; /* Adjust border style and color as desired */
+    padding: 10px; /* Add padding for spacing around the artwork */
+    margin: 10px; /* Add margin for spacing between artwork cards */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a box shadow for a raised effect */
+    display: flex;
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center child elements horizontally */
+    text-align: left; /* Stack child elements vertically */
+     /* Center child elements horizontally */
+     position: relative;
+    
+}
+/* Add a border to the #upload-section */
+#upload-section {
+    border: 1px solid #ccc; /* Adjust border style and color as desired */
+    padding: 10px; /* Add padding for spacing around the upload section */
+    margin: 10px; /* Add margin for spacing between sections */
+}
+/* Set the width and height for both #upload-section and #leaderboard */
+/* Set the width and height for both #upload-section and #leaderboard to double their present size */
+#upload-section,
+#leaderboard {
+    background-color: #D8BFD8;
+    width: calc(100% - 40px); /* Double the width minus padding and margin */
+    height: calc(100% - 40px); /* Double the height minus padding and margin */
+    border: 1px solid #ccc;
+    padding: 20px; /* Double the padding for spacing around the sections */
+    margin: 20px; /* Double the margin for spacing between sections */
+}
+/* Set the width and reduce the height for #upload-section */
+
+/* Adjust the CSS to style the elements within #upload-section */
+#upload-section {
+    width: calc(50% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submission-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#artwork-upload {
+    margin-bottom: 10px; /* Add margin between Choose File and Submit buttons */
+}
+/* Set the desired width and height for both #upload-section and #leaderboard */
+#upload-section,
+#leaderboard {
+    width: calc(70% - 20px); /* Adjust the width as desired */
+    height: calc(50% - 20px); /* 50% height minus padding and margin */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Adjust the CSS to style the elements within #upload-section */
+#submission-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+#artwork-upload {
+    margin-bottom: 10px; /* Add margin between Choose File and Submit buttons */
+}
+#upload-section {
+    height: calc(35% - 20px); /* Adjust the reduced height as desired */
+}
+
+/* Style the upload section */
+#upload-section {
+    width: calc(70% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the heading outside the box */
+.upload-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Style the file input and label */
+.file-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#artwork-upload {
+    display: none;
+}
+
+.file-label {
+    background-color:#EBDEF0;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the contest details (title and description) */
+.contest-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#artwork-title,
+#artwork-description {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the submit button */
+#file-submit {
+    background-color:#EBDEF0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#file-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Rest of your CSS styles */
+/* Style the upload section */
+#upload-section {
+    background-color: #D8BFD8;
+    width: calc(70%-20px);
+    height: calc(100%-20px);
+    border: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Style the heading outside the box */
+.upload-heading {
+    width: 80%;
+    /* text-align: center; */
+    margin-bottom: 1px;
+}
+
+/* Style the file input and label */
+.file-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#artwork-upload {
+    display: none;
+}
+
+.file-label {
+    background-color:#EBDEF0;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the contest details (title and description) */
+.contest-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow-y: auto; /* Add scroll when content exceeds height */
+    max-height: 150px; /* Set the maximum height for the description box */
+}
+
+#artwork-title,
+#artwork-description {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the submit button */
+#file-submit {
+    
+    background-color:#EBDEF0;
+    color:black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#file-submit:hover {
+    background-color: #0056b3;
+}
+/* Style the comments section */
+
+/* Style the upload section */
+#upload-section {
+    width: calc(75% - 20px); /* Adjust the width as desired */
+    height: 200px; /* Set a fixed height for the upload section */
+    border: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Style the leaderboard section */
+#leaderboard {
+    width: calc(70% - 20px); /* Adjust the width as desired */
+    height: 300px; /* Set a fixed height for the leaderboard section */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: lilac; /* Use your desired lilac color */
+    text-align: center;
+}
+.artwork-card img {
+    max-width: 70%; /* Ensure the image fits within its parent container */
+    max-height: 70%; /* Ensure the image fits within its parent container */
+    height: auto; 
+    align-items: flex-end;
+    margin: 0;/* Maintain aspect ratio */
+}
+.like-button {
+    margin-top: 10px; /* Add spacing between the image and like button */
+    text-align: left; 
+    align-items: left;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: flex-start;
+    margin-left: 100px/* Center the like button horizontally */
+}
+.comments-section{
+    align-self: flex-start;
+    margin-left: 120px
+}
