@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Add the comment to the comments list
                 const commentsList = commentsSection.querySelector('.comments-list');
-                commentsList.appendChild(comment);\
+                commentsList.appendChild(comment);
 
                 // Clear the textarea
                 textarea.value = '';
@@ -113,10 +113,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-function goToOldContests() {
-    // Redirect to the "old_contests.html" page when the button is clicked
-    window.location.href = "old_contests.html";
-}
-
 
 
