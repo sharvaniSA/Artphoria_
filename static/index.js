@@ -1,3 +1,13 @@
+document.getElementById("loginButton").addEventListener("click", function() {
+    // Redirect to the login page when the button is clicked
+    window.location.href = "../templates/login.html";
+  });
+
+document.getElementById("signupButton").addEventListener("click", function() {
+        // Redirect to the sign-up page (signup.html)
+        window.location.href = "../templates/register.html";
+    });
+
 let slideIndex = 0;
 showSlides();
 
