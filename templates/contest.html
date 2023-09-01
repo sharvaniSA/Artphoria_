@@ -9,12 +9,15 @@
 </head>
 <body>
     <header>
+        <button class="prev-res" onclick="goToOldContests()">Old Contests</button>
         <h1>Art Contest</h1>
-    </header>
+        <button class="new-res">Upcoming Contests</button>
 
+    </header>
     <main>
         <section id="artwork-gallery">
-            <h2>Artwork Gallery</h2>
+            <br>
+            <br>
             <div id="artwork-list">
                 <!-- Artwork cards will be dynamically generated here -->
                 <!-- Repeat this card structure for each artwork -->
@@ -92,7 +95,7 @@
         <div id="right-column">
             <div class="upload-heading">
                 <br>
-                <h2>Upload Your Artwork</h2>
+                <h2>Apply For Contest</h2>
             </div>
             <section id="upload-section">
                 <form id="submission-form">
@@ -108,9 +111,14 @@
             </section>
             
             
-
+            <h2>Past contest Winner</h2>
+            <section id="past-contest-winner">
+                <div class="Alumni">
+                    <img src="../assets/siri.png" alt="Winner Image">
+                </div>
+            </section>
+            <h2>Leaderboard</h2>
             <section id="leaderboard">
-                <h2>Leaderboard</h2>
                 <div id="leaderboard-list">
                     <!-- User rankings will be dynamically generated here -->
                 </div>

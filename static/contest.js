@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create a leaderboard entry
             const leaderboardEntry = document.createElement('div');
             leaderboardEntry.classList.add('leaderboard-entry');
-            leaderboardEntry.innerHTML = `<span class="leaderboard-rank">${rank + 1}.</span> ${username} (${likes} likes)`;
+            leaderboardEntry.innerHTML = `<span class="leaderboard-rank">${rank + 1}.</span> ${username} : ${likes} likes`;
 
             // Append the entry to the leaderboard
             leaderboardList.appendChild(leaderboardEntry);
@@ -113,7 +113,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-
 
 

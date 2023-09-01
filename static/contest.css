@@ -1,6 +1,4 @@
-/* Basic Styles */
-
-body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -23,70 +21,69 @@ main {
 }
 
 #artwork-gallery {
-    flex: 2; /* Allocate 2/3rd of the screen for artwork display */
-    margin-right: 10px; /* Add some spacing between columns */
+    flex: 2; 
+    margin-right: 10px; 
 }
 
 #right-column {
-    flex: 1; /* Adjust the width of the right column */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    margin-left: 10px; /* Add some spacing between columns */
+    margin-left: 10px; 
 }
 
 #upload-section {
-    /* Styles for the Upload Your Artwork section */
-    margin-bottom: 20px; /* Add spacing between sections */
+    
+    margin-bottom: 20px; 
 }
 
-#leaderboard {
-    /* Styles for the Leaderboard section */
+#leaderboard ,#past-contest-winner{
+    
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: lilac; /* Use your desired lilac color */
+    background-color: lilac; 
     text-align: center;
 }
 
 h2 {
     font-size: 1.5rem;
 }
-/* Add a border to the .artwork-card class */
+
 .artwork-card {
     background-color: #D8BFD8;
-    border: 1px solid #ccc; /* Adjust border style and color as desired */
-    padding: 10px; /* Add padding for spacing around the artwork */
-    margin: 10px; /* Add margin for spacing between artwork cards */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a box shadow for a raised effect */
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin: 10px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
     display: flex;
     display: flex;
-    flex-direction: column; /* Stack child elements vertically */
-    align-items: center; /* Center child elements horizontally */
-    text-align: left; /* Stack child elements vertically */
-     /* Center child elements horizontally */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: left; 
      position: relative;
     
 }
-/* Add a border to the #upload-section */
-#upload-section {
-    border: 1px solid #ccc; /* Adjust border style and color as desired */
-    padding: 10px; /* Add padding for spacing around the upload section */
-    margin: 10px; /* Add margin for spacing between sections */
-}
-/* Set the width and height for both #upload-section and #leaderboard */
-/* Set the width and height for both #upload-section and #leaderboard to double their present size */
-#upload-section,
-#leaderboard {
-    background-color: #D8BFD8;
-    width: calc(100% - 40px); /* Double the width minus padding and margin */
-    height: calc(100% - 40px); /* Double the height minus padding and margin */
-    border: 1px solid #ccc;
-    padding: 20px; /* Double the padding for spacing around the sections */
-    margin: 20px; /* Double the margin for spacing between sections */
-}
-/* Set the width and reduce the height for #upload-section */
 
-/* Adjust the CSS to style the elements within #upload-section */
+#upload-section {
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin: 10px; 
+}
+
+
+#upload-section,
+#leaderboard ,#past-contest-winner{
+    background-color: #D8BFD8;
+    width: calc(100% - 40px); 
+    height: calc(100% - 40px); 
+    border: 1px solid #ccc;
+    padding: 20px; 
+    margin: 20px; 
+}
+
+
+
 #upload-section {
     width: calc(50% - 20px);
     border: 1px solid #ccc;
@@ -104,19 +101,19 @@ h2 {
 }
 
 #artwork-upload {
-    margin-bottom: 10px; /* Add margin between Choose File and Submit buttons */
+    margin-bottom: 10px; 
 }
-/* Set the desired width and height for both #upload-section and #leaderboard */
+
 #upload-section,
-#leaderboard {
-    width: calc(70% - 20px); /* Adjust the width as desired */
-    height: calc(50% - 20px); /* 50% height minus padding and margin */
+#leaderboard, #past-contest-winner{
+    width: calc(70% - 20px); 
+    height: calc(50% - 20px); 
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
 }
 
-/* Adjust the CSS to style the elements within #upload-section */
+
 #submission-form {
     display: flex;
     flex-direction: column;
@@ -125,13 +122,11 @@ h2 {
 }
 
 #artwork-upload {
-    margin-bottom: 10px; /* Add margin between Choose File and Submit buttons */
+    margin-bottom: 10px; 
 }
 #upload-section {
-    height: calc(35% - 20px); /* Adjust the reduced height as desired */
+    height: calc(35% - 20px); 
 }
-
-/* Style the upload section */
 #upload-section {
     width: calc(70% - 20px);
     border: 1px solid #ccc;
@@ -142,14 +137,12 @@ h2 {
     align-items: center;
 }
 
-/* Style the heading outside the box */
 .upload-heading {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
 }
 
-/* Style the file input and label */
 .file-input {
     display: flex;
     flex-direction: column;
@@ -168,8 +161,6 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
 }
-
-/* Style the contest details (title and description) */
 .contest-details {
     display: flex;
     flex-direction: column;
@@ -185,8 +176,6 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-/* Style the submit button */
 #file-submit {
     background-color:#EBDEF0;
     color: white;
@@ -199,9 +188,6 @@ h2 {
 #file-submit:hover {
     background-color: #0056b3;
 }
-
-/* Rest of your CSS styles */
-/* Style the upload section */
 #upload-section {
     background-color: #D8BFD8;
     width: calc(70%-20px);
@@ -213,17 +199,14 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* Hide overflow content */
+    overflow: hidden; 
 }
-
-/* Style the heading outside the box */
 .upload-heading {
     width: 80%;
-    /* text-align: center; */
+   
     margin-bottom: 1px;
 }
 
-/* Style the file input and label */
 .file-input {
     display: flex;
     flex-direction: column;
@@ -243,14 +226,13 @@ h2 {
     cursor: pointer;
 }
 
-/* Style the contest details (title and description) */
 .contest-details {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-    overflow-y: auto; /* Add scroll when content exceeds height */
-    max-height: 150px; /* Set the maximum height for the description box */
+    overflow-y: auto; 
+    max-height: 150px; 
 }
 
 #artwork-title,
@@ -262,7 +244,7 @@ h2 {
     border-radius: 5px;
 }
 
-/* Style the submit button */
+
 #file-submit {
     
     background-color:#EBDEF0;
@@ -276,41 +258,41 @@ h2 {
 #file-submit:hover {
     background-color: #0056b3;
 }
-/* Style the comments section */
-
-/* Style the upload section */
 #upload-section {
-    width: calc(75% - 20px); /* Adjust the width as desired */
-    height: 200px; /* Set a fixed height for the upload section */
+    width: calc(75% - 20px); 
+    height: 200px; 
     border: 1px solid #ccc;
+    justify-content: flex-end;
+    align-items: center;
     padding-top: 20px;
     padding-bottom: 10px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* Hide overflow content */
+    overflow: hidden; 
 }
 
-/* Style the leaderboard section */
+
 #leaderboard {
-    width: calc(70% - 20px); /* Adjust the width as desired */
-    height: 300px; /* Set a fixed height for the leaderboard section */
+    display: flex;
+    width: calc(70% - 20px); 
+    height: 300px; 
     border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
-    background-color: lilac; /* Use your desired lilac color */
+    background-color: lilac; 
     text-align: center;
 }
 .artwork-card img {
-    max-width: 70%; /* Ensure the image fits within its parent container */
-    max-height: 70%; /* Ensure the image fits within its parent container */
+    max-width: 70%; 
+    max-height: 70%; 
     height: auto; 
     align-items: flex-end;
-    margin: 0;/* Maintain aspect ratio */
+    margin: 0;
 }
 .like-button {
-    margin-top: 10px; /* Add spacing between the image and like button */
+    margin-top: 10px; 
     text-align: left; 
     align-items: left;
     padding: 5px 10px;
@@ -318,9 +300,67 @@ h2 {
     cursor: pointer;
     margin-top: 20px;
     align-self: flex-start;
-    margin-left: 100px/* Center the like button horizontally */
+    margin-left: 100px;
 }
 .comments-section{
     align-self: flex-start;
     margin-left: 120px
+}
+#past-contest-winner  {
+    width: calc(70% - 20px); 
+    height: 300px; 
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    align-content: flex-end;
+}
+#Alumni {
+    text-align: center;
+    max-width:100%;
+    height:500px;
+}
+.Alumni {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:480px;
+    padding: 0%;
+    height: 180px; 
+}
+#upload-section{
+    width: 345px;
+    padding-right: 12px;
+    border-radius: 5px;
+}
+.Alumni { 
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width:400px;
+    padding-left: 30px;
+    padding-top: 80px;
+    text-align: center; 
+}
+#leaderboard{
+    text-align: left;
+} 
+h2{
+    width: 380px;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between; /* Distribute items horizontally with space between them */
+    align-items: center; /* Center items vertically within the header */
+}
+
+/* Optional: Style for the buttons */
+.prev-res, .new-res {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #EBDEF0; /* Example background color */
+    color: black; /* Example text color */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
 }
