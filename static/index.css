@@ -4,22 +4,26 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
-.img{
-   top: 10px;
-   left: 120px;
-   display: flex;
-   font-family:"Lucida Console", monospace;
-   font-size: 20px;
-   }
+
+.header {
+    display: flex;
+    
+    padding: 10px;
+}
+
+.logo img {
+    width: 50px; 
+}
+
+.brand-name h1 {
+    font-size: 24px; 
+    margin-left: 10px; 
+    font-family: 'Montserrat Alternates', sans-serif;
+}
 
 
-<!--.artphoria{
-  top: 10px;
-  font-family:"Lucida Handwriting", cursive;
-  
-  font-family:"Lucida Handwriting", cursive;
-  }
--->
+
+
   
 .login-button {
     position: absolute;
@@ -45,10 +49,10 @@
     cursor:pointer;
 }
 .slideshow-container {
-    max-width: 60%;
+    max-width: 900%;
     position: relative;
     margin: auto;
-    
+    margin-bottom: 60px;
 }
 
 .slide {
@@ -79,4 +83,120 @@
 }
 .signin-button{
 cursor:pointer;
+}
+
+
+
+
+.sell-section {
+    background-color: #EAC696; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.info {
+    flex: 1;
+    padding: 20px;
+    font-family: "Lucida Console", monospace;
+    color: #765827;
+}
+
+.info h3 {
+    font-size: 60px;
+    font-family: 'Lora', serif;
+}
+
+.info p {
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.buy-section {
+    background-color: #749BC2; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image-buy {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-buy img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-buy {
+    flex: 1;
+    padding: 20px;
+    color: #F6F4EB;
+}
+
+.info-buy h3 {
+    font-size: 60px;
+    
+    font-family: 'Lora', serif;
+
+}
+
+.info-buy p {
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    
+}
+
+
+.learn-section {
+    background-color: #93B1A6; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.info-learn {
+    flex: 1;
+    padding: 20px;
+    font-family: "Lucida Console", monospace;
+    color: #183D3D;
+}
+
+.info-learn h3 {
+    font-size: 60px;
+    font-family: 'Lora', serif;
+}
+
+.info-learn p {
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    
+}
+
+.image-learn {
+    flex: 1;
+    text-align: center;
+}
+
+.image-learn img {
+    max-width: 100%;
+    height: auto;
 }
