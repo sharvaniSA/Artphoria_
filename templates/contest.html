@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Contest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../static/contest.css">
+</head>
+<body>
+    <header>
+        <h1>Art Contest</h1>
+    </header>
+
+    <main>
+        <section id="artwork-gallery">
+            <h2>Artwork Gallery</h2>
+            <div id="artwork-list">
+                <!-- Artwork cards will be dynamically generated here -->
+                <!-- Repeat this card structure for each artwork -->
+                <!-- Inside the #artwork-list div, add the following structure for each artwork -->
+                <!-- Inside the #artwork-list div, add the following structure for each additional artwork -->
+<!-- Inside the #artwork-list div, add the following structure for each additional artwork -->
+<div class="artwork-card">
+    <img src="../assets/no2.png" alt="Artwork Title 2">
+    <div class="like-button">
+        <i class="fas fa-heart"></i>
+        <span class="like-count">0</span>
+    </div>
+    <div class="comments-section">
+        <h4>Comments:</h4>
+        <textarea class="comment-input" placeholder="Add a comment..."></textarea>
+                        <button class="comment-submit" type="button">Submit</button>
+        <ul class="comments-list">
+            <!-- Comments will be dynamically generated here -->
+            <li>
+                <span class="comment-author">User456:</span>
+                <span class="comment-text">Amazing artwork!</span>
+            </li>
+            <!-- Repeat this structure for each comment -->
+        </ul>
+    </div>
+</div>
+<!-- Repeat this card structure for each additional artwork -->
+
+<div class="artwork-card">
+    <img src="../assets/no1.png" alt="Artwork Title 2">
+    <div class="like-button">
+        <i class="fas fa-heart"></i>
+        <span class="like-count">0</span>
+    </div>
+    <div class="comments-section">
+        <h4>Comments:</h4>
+        <textarea class="comment-input" placeholder="Add a comment..."></textarea>
+        <button class="comment-submit" type="button">Submit</button>
+        <ul class="comments-list">
+            <!-- Comments will be dynamically generated here -->
+            <li>
+                <span class="comment-author">User456:</span>
+                <span class="comment-text">Amazing artwork!</span>
+            </li>
+            <!-- Repeat this structure for each comment -->
+        </ul>
+    </div>
+</div>
+<!-- Repeat this card structure for each additional artwork -->
+
+                <div class="artwork-card">
+                    <img src="../assets/no3.png" alt="Artwork Title">
+                    <div class="like-button">
+                        <i class="fas fa-heart"></i>
+                        <span class="like-count">0</span>
+                    </div>
+                    <div class="comments-section">
+                        <h4>Comments:</h4>
+                        <textarea class="comment-input" placeholder="Add a comment..."></textarea>
+                        <button class="comment-submit" type="button">Submit</button>
+                        <ul class="comments-list">
+                            <!-- Comments will be dynamically generated here -->
+                            <li>
+                                <span class="comment-author">User123:</span>
+                                <span class="comment-text">Beautiful artwork!</span>
+                            </li>
+                            <!-- Repeat this structure for each comment -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- Repeat this card structure for each artwork -->
+            </div>
+        </section>
+
+        <div id="right-column">
+            <div class="upload-heading">
+                <br>
+                <h2>Upload Your Artwork</h2>
+            </div>
+            <section id="upload-section">
+                <form id="submission-form">
+                    <div class="file-input">
+                        <input type="file" accept="image/*" id="artwork-upload" required>
+                        <label for="artwork-upload" class="file-label">Choose Artwork</label>
+                    </div>
+                    <div class="contest-details">
+                        <input type="text" id="artwork-title" placeholder="Title" maxlength="50" required>
+                        <textarea id="artwork-description" placeholder="Description (max 50 words)" maxlength="50" required></textarea>
+                    </div>
+                </form>
+            </section>
+            
+            
+
+            <section id="leaderboard">
+                <h2>Leaderboard</h2>
+                <div id="leaderboard-list">
+                    <!-- User rankings will be dynamically generated here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../static/contest.js"></script>
+</body>
+</html>
