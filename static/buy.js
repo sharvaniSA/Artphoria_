@@ -1,9 +1,9 @@
 // Function to update the total amount based on quantity
 function updateTotal() {
     const quantity = document.getElementById('quantity').value;
-    const pricePerUnit = 99.99; // Replace with the actual price per unit
+    const pricePerUnit = 5000; // Replace with the actual price per unit
     const totalAmount = (pricePerUnit * quantity).toFixed(2);
-    document.querySelector('.total-amount').textContent = `Total Amount: $${totalAmount}`;
+    document.querySelector('.total-amount').textContent = `Total Amount: ${totalAmount}Rs`;
 }
 
 // Function to update the star rating display
