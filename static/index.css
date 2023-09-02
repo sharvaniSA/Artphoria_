@@ -120,7 +120,7 @@ cursor:pointer;
 }
 
 .image img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -134,16 +134,39 @@ cursor:pointer;
     padding: 20px;
 }
 
-.image-buy {
+.image-container {
     flex: 1;
-    padding: 20px;
-    text-align: center;
+        position: relative;
+        width: 300px;
+    left: 60px;
+    }
+
+    
+    .image1{
+    width: 20%;
+    height: auto;
+    left: 100px;
+}
+    .image2 {
+        position: absolute;
+        width: 20%;
+        height: auto; 
+        top: 80px; 
+        left: 160px; 
+    
+    }
+.image3{
+    position: absolute;
+    width: 20%;
+    height:auto;
+    top: 20px;
+    left: 320px;
 }
 
-.image-buy img {
-    max-width: 100%;
-    height: auto;
-}
+    /* Style for hover effect */
+    .image1:hover {
+        opacity: 1; 
+    }
 
 .info-buy {
     flex: 1;

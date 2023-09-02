@@ -2,12 +2,12 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color :#AA98A9;
+    background-color :#917FB3;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
 header {
-    background-color: #333;
+    background-color: #654E92;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -51,7 +51,7 @@ h2 {
 }
 
 .artwork-card {
-    background-color: #D8BFD8;
+    background-color: #C9A7EB;
     border: 1px solid #ccc; 
     padding: 10px; 
     margin: 10px; 
