@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../static/buy.css">
+</head>
+<body>
+    <header>
+        <h1>Buy Now</h1>
+    </header>
+    <div class="container">
+        <div class="product-box">
+            <div class="product-details">
+                <img src="../assets/buy.png" alt="Product Image">
+                <h3>Fox</h3>
+                <p class="product-description">This is a colorful fox.</p>
+                <p class="product-price">$99.99</p>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" onchange="updateTotal()">
+                    <p class="total-amount">Total Amount: $99.99</p>
+                </div>
+                <div class="buy-now">
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="star-rating">
+            <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+            <div class="selected-stars"></div>
+        </div>
+        <div class="comment-section">
+            <h3 class="add-comment-heading">Add a Comment</h3>
+            <textarea class="comment-input" placeholder="Write your comment here..."></textarea>
+            <button class="add-comment-button" onclick="addComment()">Add Comment</button>
+        </div>
+        <div class="customer-reviews-box">
+            <h2 class="customer-reviews-heading">Customer Reviews</h2>
+            <!-- Customer reviews here -->
+        </div>
+    </div>
+    <script src="../static/buy.js"></script>
+</body>
+</html>
