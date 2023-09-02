@@ -1,0 +1,257 @@
+/* CSS styles remain mostly the same, with adjustments for the new layout. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color :#AA98A9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 33.33%; /* Limits the container to 1/3rd of the screen width */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px; /* Optional padding for spacing */
+    border: 1px solid #ccc; /* Add a border to the container */
+    background-color: #D8BFD8
+}
+
+.product-box,
+.star-rating,
+.comment-section,
+.customer-reviews-box {
+    background-color: #EBDEF0;
+    border: none; /* Remove border */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.comment-input,
+.customer-review-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.buy-now-button,
+.add-comment-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.review-box {
+    margin-top: 20px;
+    text-align: left; /* Align the text to the left */
+}
+
+.customer-reviews-heading,
+.add-comment-heading {
+    text-align: left; /* Align the headings to the left */
+    font-size: 24px; /* Increase font size for the headings */
+    margin-bottom: 20px; /* Add spacing below the headings */
+}
+
+.user-review,
+.customer-review {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* Remove border around user reviews and customer reviews */
+    display: flex;
+    align-items: center; /* Vertically align content */
+}
+
+.user-comment,
+.customer-review-text {
+    font-size: 14px;
+    flex-grow: 1; /* Allow username and text to take up remaining space */
+    padding-left: 10px; /* Add spacing between username and comment/text */
+}
+
+/* Add a class for the username display */
+.username {
+    font-weight: bold;
+    padding-right: 10px; /* Add spacing between username and comment/text */
+}
+
+/* Add styles for the stars */
+.star {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffcc00; /* Yellow star color */
+    margin-right: 5px; /* Add spacing between stars */
+}
+.product-details img {
+    max-width: 100%;
+    max-height: 100%; /* Add this line */
+    height: auto;
+}
+.customer-reviews-heading {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px !important; /* Use !important to ensure it overrides other styles */
+}
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.product-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.product-details {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-description {
+    margin-top: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.quantity-selector {
+    margin-top: 20px;
+}
+
+.quantity-selector label,
+.total-amount {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product-feedback {
+    flex: 1;
+    padding: 20px;
+}
+
+.star-rating {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    margin-right: 10px;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffcc00 ;
+}
+
+.selected-stars {
+    font-size: 24px;
+    color: #ffcc00; 
+}
+
+.comment-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.buy-now-button,
+.add-comment-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.review-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user-comment {
+    font-size: 14px;
+}
+.container {
+    
+    max-width: 33.33%; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 33.33%; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc; 
+}
+
+.product-box,
+.comment-section,
+.star-rating {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.comment-section {
+    background-color: #fff; 
+} */
