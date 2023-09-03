@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Login Artphoria</title>
-<link rel = "stylesheet" href = "../static/login.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-	</head>
-	<body>  
-                <body background = "C:\Users\sharv\Downloads\download.jpeg">
-		<div class="a">
-			<img width = "220" src="C:\Users\sharv\OneDrive\Documents\art images\logoname.jpg" ><br>
-                        <br>
-			<form>
-				<input type="text" id="Phone" name="" placeholder = "Phone number,username or email"><br>
-                                <div class="gap1"></div>
-				<input type="text" id="Pwd" name="" placeholder = "Password" >
-				<div class = "gap2"></div>
-                           	<input type="submit" value="Log in"><br>
-				<!--
-				<button type="button" class="btn btn-info">Log in</button><br>
-				-->
-			</form>
-                        <br>
-			<div class="divider">
-					<span>OR</span>
-			</div>
-                        <br>
-			<a style="font:small-caption" href="https://www.instagram.com/accounts/password/reset/" class = "no-underline fp-link"><span-b> Forgot Password?</span> </a><br>
-		</div>
-		<div class="b">
-			Don't have an account? <a style="font-weight:600; color:rgb(0,149,246)" href="https://www.instagram.com/accounts/emailsignup/" class = "no-underline" >Sign up</a>
-		</div>
-	</body>
+<head>
+    <title>Login Artphoria</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="a">
+    <img width="220" src="C:\Users\sharv\OneDrive\Documents\art images\logoname.jpg" alt="Logo"><br><br>
+    <form action="main.html" method="GET">
+        <input type="text" id="Phone" name="username" placeholder="Phone number, username, or email"><br>
+        <div class="gap1"></div>
+        <input type="password" id="Pwd" name="password" placeholder="Password">
+        <div class="gap2"></div>
+		<a href =  "main.html">
+        <button type="submit">Log in</button><br>
+		</a>
+    </form>
+    <br>
+    <div class="divider">
+        <span>OR</span>
+    </div>
+    <br>
+    <a style="font:small-caption" href="https://www.instagram.com/accounts/password/reset/" class="no-underline fp-link"><span-b>Forgot Password?</span></a><br>
+</div>
+<div class="b">
+    Don't have an account? <a style="font-weight: 600; color: rgb(0, 149, 246)" href="https://www.instagram.com/accounts/emailsignup/" class="no-underline">Sign up</a>
+</div>
+</body>
 </html>
-
