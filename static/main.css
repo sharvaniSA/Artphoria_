@@ -71,6 +71,7 @@ ul {
     font-family: "Georgia",sans-serif;
 }
 
+
 /* Style for the main content */
 main {
     margin-left: 270px;
@@ -249,6 +250,9 @@ body {
 	font-size: 30px;
 }
 
+.article-content img{
+    width: 400px;
+}
 
 /*.additional-paragraph {
     font-size: 18px;
