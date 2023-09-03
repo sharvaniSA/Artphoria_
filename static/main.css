@@ -178,7 +178,7 @@ body {
     border-radius: 5px; /* Add rounded corners */
     color: #333; /* Set text color */
     font-size:20px;
-    fon-family:san-serif;
+    font-family:san-serif;
     text-align:left;
     font-family: "Georgia",sans-serif;
 }
@@ -198,4 +198,75 @@ body {
     padding: 5px 10px;
 }
 
+/* Style for the news section */
+.news {
+    padding: 20px;
+    background-color: #EBDEF0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+/* Style for individual news articles */
+.news-article {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-right: 120px;
+    background-color: #fff;
+}
+
+/* Style for article header */
+.article-header {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the logo */
+.logo img {
+    max-width: 60px; /* Adjust the logo size as needed */
+}
+
+/* Style for sender information */
+.sender-info {
+    margin-left: 20px;
+}
+
+/* Style for article titles */
+.article-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style for article dates */
+.article-date {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.additional-paragraph {
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 1.5em; /* Adjust the height as needed for approximately 30 words */
+}
+
+/* Style for expanded additional content */
+.additional-paragraph.expanded {
+    max-height: none;
+    white-space: normal;
+    text-overflow: initial;
+}
+
+.article-content h3{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 30px;
+}
+
+<!--
+.read-more-link {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+} -->
