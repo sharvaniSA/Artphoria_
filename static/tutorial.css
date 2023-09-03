@@ -68,4 +68,11 @@ body {
     background-color: rgba(255, 255, 255, 0.1); /* Light background color on hover */
     border-radius: 5px; /* Add some rounded corners on hover */
 }
+.back-button {
+    background-color: #7579ab;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
 
