@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 function goToMainPage() {
-    window.location.href = "../templates/main.html";
+    window.location.href = "../templates/tutorial.html";
 }
 
 //
