@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+function goToMainPage() {
+    window.location.href = "../templates/main.html";
+}
+
 //
 const menuItems = document.querySelectorAll('.menu li a');
 const sketchVideos = document.querySelector('.sketch-videos');
