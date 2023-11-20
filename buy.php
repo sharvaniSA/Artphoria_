@@ -203,17 +203,34 @@ margin-bottom:100px;
                     if (isset($_POST['add_to_cart'])) {
                         $artwork_id = $_POST['artwork_id'];
                         $user_id = $_SESSION['user_id'];
-                        $artwork_title = $_POST['artwork_title'];
-                        $artist_name = $_POST['artist_name'];
-                        $description = $_POST['artwork_description'];
-                        $artwork_price = $_POST['artwork_price'];
-                        $check_query = "SELECT * from cart_entries where artwork_id = $artwork_id and user_id = $user_id";
+                        $check_query = "SELECT * from sample_cart where artwork_id = $artwork_id and user_id = $user_id";
                         $check_query_result = $conn->query($check_query);
                         if($check_query_result->num_rows === 0){
-                            $insert_query = "INSERT INTO cart_entries (artwork_id, artwork_title, artist_name, artwork_price,user_id,artwork_description,artwork_image) 
-                                    VALUES ('$artwork_id', '$artwork_title', '$artist_name', '$artwork_price','$user_id','$description','$artwork_image')";
+                            $insert_query = "INSERT INTO sample_cart (artwork_id, user_id) 
+                                    VALUES ('$artwork_id', '$user_id')";
                             if($conn->query($insert_query)){
-                                header("Location: cart.php");
+                                echo "<script>
+                                alert('Added to cart successfully!');
+                                window.location.href = 'buy.php';
+                                </script>";
+                            }else{
+                                die('Error: ' . mysqli_error());
+                            }
+                        }
+                    }
+                    if (isset($_POST['buy_now'])) {
+                        $artwork_id = $_POST['artwork_id'];
+                        $user_id = $_SESSION['user_id'];
+                        $check_query = "SELECT * from buy where artwork_id = $artwork_id and user_id = $user_id";
+                        $check_query_result = $conn->query($check_query);
+                        if($check_query_result->num_rows === 0){
+                            $insert_query = "INSERT INTO buy (artwork_id, user_id) 
+                                    VALUES ('$artwork_id', '$user_id')";
+                            if($conn->query($insert_query)){
+                                echo "<script>
+                                alert('redirecting to payment page');
+                                window.location.href = 'index.php';
+                                </script>";
                             }else{
                                 die('Error: ' . mysqli_error());
                             }

@@ -178,42 +178,7 @@ margin-bottom:100px;
                                     </div>
                                     </div>
                                 </div>";
-                        // $count++;
                     }
-                        
-                        // $description = $row['artwork_description'];
-                        // $artwork_image = $row['artwork_image'];
-                        // $artist_name = $row['artist_name'];
-                        // $artwork_title = $row['artwork_title'];
-                        // $artwork_price = $row['artwork_price'];
-                        // $artwork = '' . $artwork_image;
-                        // $count = $count+ $artwork_price;
-                        // echo "<div class='col-md-3 mb-4'>
-                        //     <div class='card' style='background-color: #fff;'>
-                        //         <div class='card-body' style='text-align: center;'>
-                        //             <div class='card-img'>
-                        //                 <img src='$artwork' alt='$artwork_title' class='image-style'>
-                        //             </div>
-                        //             <p class='card-text'>$artwork_title</p>
-                        //             <p class='card-text'>$description</p>
-                        //             <p class='card-text'>Price : $artwork_price</p>
-                        //             <p class='card-text'>Artist : $artist_name</p>
-                        //             <a href='#' class='btn btn-info' style='margin-bottom: 10px;'>Buy now</a>
-                        //             <a href='#' class='btn btn-info' style='margin-bottom: 10px;'>Remove</a>
-                        //             </div>
-                        //             </div>
-                        //         </div>";
-
-                        //     }
-                        //     echo "<div class='col-md-3 mb-4'>
-                        //     <h3 style = 'text-align:center;'>TOTAL : $count</h3>
-                        //      <a href='#' class='btn btn-info' style='
-                        //     margin: 0;
-                        //     position: absolute;
-                        //     top:14%;
-                        //     left: 120%;
-                        //     '>CheckOut</a><br>
-                        //     </div>";
                             ?>
                         </div>
                     </div>

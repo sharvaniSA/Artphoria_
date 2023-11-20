@@ -125,9 +125,13 @@ margin-bottom:100px;
 <body background="uploads/Background.jpeg">
     <div class="header">
         <div class="header-content">
-            <div class="logo">
-                <img src="uploads/logoname.png" alt="Your Logo">
-            </div>
+        <a href="main.php">
+          <img src="uploads/logoname.png" alt="Your Logo" style = '
+border-radius:5%;
+margin: 10px 10px;
+width: 200px;
+'>
+      </a>
             <div class="search-box">
                 <input type="search" id = "searchInput" placeholder="Search">
                 <button id = "searchButton"><i class="fa fa-search"></i></button>
@@ -139,6 +143,7 @@ margin-bottom:100px;
             <div class="col-md-10">
                 <div class="row justify-content-center">
                     <?php
+                    session_start();
                     $db_host = 'localhost';
                     $db_user = 'root';
                     $db_pass = '';
@@ -148,62 +153,119 @@ margin-bottom:100px;
                     if (!$conn) {
                         die("Database connection failed: " . mysqli_connect_error());
                     }
-                    $select_query = "Select * from `cart_entries` WHERE user_id = $user_id";
+                    $select_query = "Select artwork_id from `sample_cart` WHERE user_id = $user_id";
                     $result_query = mysqli_query($conn, $select_query);
                     $count = 0;
                     while ($row = mysqli_fetch_assoc($result_query)) {
-                        $description = $row['artwork_description'];
-                        $artwork_image = $row['artwork_image'];
-                        $artist_name = $row['artist_name'];
-                        $artwork_title = $row['artwork_title'];
-                        $artwork_price = $row['artwork_price'];
-                        $artwork = '' . $artwork_image;
+                        $artwork_id = $row["artwork_id"];
+                        $sql = "SELECT * FROM `artwork_entries` WHERE id=$artwork_id";
+                        $resul = mysqli_query($conn, $sql);
+                        $res = mysqli_fetch_assoc($resul);
+                        $description = $res['description'];
+                        $artwork_image = $res['artwork_image'];
+                        $artist_name = $res['artist_name'];
+                        $artwork_title = $res['artwork_title'];
+                        $artwork_price = $res['artwork_price'];
                         $count = $count+ $artwork_price;
                         echo "<div class='col-md-3 mb-4'>
-                            <div class='card' style='background-color: #fff;'>
-                                <div class='card-body' style='text-align: center;'>
-                                    <div class='card-img'>
-                                        <img src='$artwork' alt='$artwork_title' class='image-style'>
-                                    </div>
-                                    <p class='card-text'>$artwork_title</p>
-                                    <p class='card-text'>$description</p>
-                                    <p class='card-text'>Price : $artwork_price</p>
-                                    <p class='card-text'>Artist : $artist_name</p>
-                                    <a href='#' class='btn btn-info' style='margin-bottom: 10px;'>Buy now</a>
-                                    <a href='#' class='btn btn-info' style='margin-bottom: 10px;'>Remove</a>
-                                    </div>
-                                    </div>
-                                </div>";
+    <form method='post' action='cart.php'>
+        <a href='artwork_details.php?artwork_id=$artwork_id'>
+            <div class='card' style='background-color: #fff;'>
+                <div class='card-body' style='text-align: center;'>
+                    <div class='card-img'>
+                        <img src='$artwork_image' alt='$artwork_title' class='image-style'>
+                    </div>
+                    <p class='card-text'>$artwork_title</p>
+                    <p class='card-text'>$description</p>
+                    <p class='card-text'>Price : $artwork_price</p>
+                    <p class='card-text'>Artist : $artist_name</p>
+                    <input type='hidden' name='artwork_id' value='$artwork_id'>
+                    <button type='submit' name='add_to_cart' class='btn btn-info' style='margin-bottom: 10px;'>Add to Cart</button>
+                    <button type='submit' name='remove' value='$artwork_id' class='btn btn-info' style='margin-bottom: 10px;'>Remove</button>
 
-                            }
-                            echo "<div class='col-md-3 mb-4'>
-                            <h3 style = 'text-align:center;'>TOTAL : $count</h3>
-                             <a href='#' class='btn btn-info' style='
-                            margin: 0;
-                            position: absolute;
-                            top:14%;
-                            left: 120%;
-                            '>CheckOut</a><br>
-                            </div>";
+                </div>
+            </div>
+        </a>
+    </form>
+</div>";
+
+if (isset($_POST['remove'])) {
+    $artwork_id = $_POST["remove"];
+    $user_id = $_SESSION['user_id'];
+    $delete_query = "DELETE FROM `sample_cart` WHERE user_id = '$user_id' AND artwork_id = '$artwork_id'";
+
+    if (mysqli_query($conn, $delete_query)) {
+        
+        exit();
+    } else {
+        echo "Error removing item: " . mysqli_error($conn);
+    }
+}
+if (isset($_POST['buy_now'])) {
+    $artwork_id = $_POST['artwork_id'];
+    $user_id = $_SESSION['user_id'];
+    $check_query = "SELECT * from buy where artwork_id = $artwork_id and user_id = $user_id";
+    $check_query_result = $conn->query($check_query);
+    if($check_query_result->num_rows === 0){
+        $insert_query = "INSERT INTO buy (artwork_id, user_id) 
+                VALUES ('$artwork_id', '$user_id')";
+        if($conn->query($insert_query)){
+            echo "<script>
+            alert('redirecting to payment page');
+            window.location.href = 'index.php';
+            </script>";
+        }else{
+            die('Error: ' . mysqli_error());
+        }
+    }
+}
+
+                    }
+                    
                             ?>
                         </div>
                     </div>
                 </div>
             </div>
-        <script>
-            document.getElementById('searchButton').addEventListener('click', function() {
-                const searchInput = document.getElementById('searchInput').value.toLowerCase();
-                const cardTexts = document.querySelectorAll('.card-text');
-                for (let index = 0; index < cardTexts.length; index++) {
-                    const cardText = cardTexts[index];
-                    const card = cardText.closest('.card');
-                    if (cardText.textContent.toLowerCase().includes(searchInput)) {
-                        card.style.border = '2px solid #007BFF';
-                        break;
+            <script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const cardTexts = document.querySelectorAll('.card-text');
+        for (let index = 0; index < cardTexts.length; index++) {
+            const cardText = cardTexts[index];
+            const card = cardText.closest('.card');
+            if (cardText.textContent.toLowerCase().includes(searchInput)) {
+                card.style.border = '2px solid #007BFF';
+                break;
             } else {
                 card.style.border = 'none';
             }
         }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const removeButtons = document.querySelectorAll('.remove-button');
+
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const artworkId = this.getAttribute('data-artwork-id');
+
+                const xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            button.closest('.card').remove();
+                        } else {
+                            console.error('Error removing item:', xhr.responseText);
+                        }
+                    }
+                };
+                xhr.open('POST', 'remove_cart.php?artwork_id=' + artworkId, true);
+
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.send();
+            });
+        });
     });
 </script>
 </body>
