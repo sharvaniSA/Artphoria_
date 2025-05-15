@@ -1,4 +1,4 @@
-# Artphoria_
+# Artphoria - Platform for Art Enthusiasts
 Artphoria Web Application Documentation
 Introduction
 
